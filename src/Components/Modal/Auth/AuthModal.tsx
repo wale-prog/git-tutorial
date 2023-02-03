@@ -1,6 +1,7 @@
 import { authModalState } from "@/atoms/authmodalAtom";
 import {
   Flex,
+  MenuDivider,
   Modal,
   ModalBody,
   ModalCloseButton,
