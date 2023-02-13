@@ -45,8 +45,9 @@ const useCommunityData = () => {
         mySnippets: snippets as communitySnippet[],
       }));
       console.log("Here are the snippets", snippets);
-    } catch (error) {
+    } catch (error: any) {
       console.log("getMySnippets error", error);
+      setError(error.message)
     }
     setLoading(false);
   };
@@ -56,8 +57,29 @@ const useCommunityData = () => {
     getMySnippets();
   }, [user]);
 
-  const joinCommunity = (communityData: Community) => {};
-  const leaveCommunity = (communityId: string) => {};
+  const joinCommunity = (communityData: Community) => {
+
+    // batch file
+      // creating a new community snippet
+      //updating the numbeOfMembers
+
+    // update recoil state - communityState.mySnippets
+
+    try {
+      
+    } catch (error: any) {
+      console.log('joinCommunity Error', error)
+      setError(error.message)
+    }
+  };
+  const leaveCommunity = (communityId: string) => {
+
+    // batch file
+      // deleting the community snippet from user
+      //updating the numbeOfMembers (-1)
+
+    // update recoil state - communityState.mySnippets
+  };
   return {
     communityStateValue,
     onJoinOrLeaveCommunity,
